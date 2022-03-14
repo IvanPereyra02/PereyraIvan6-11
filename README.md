@@ -18,3 +18,6 @@ Mayor visibilidad del código que se está desarrollando.
 
 Se pueden identificar errores antes de publicar el código.
 
+
+Los se usan para describir objetivos de despliegue general, que estos son los de produccion, staging o development
+El objetivo de los ambientes es separar tus experimentos y pruebas del verdadero código que quieres que tus usuarios vean.
