@@ -1,10 +1,16 @@
 
 import requests
 
-res = requests.get('https://dog.ceo/api/breeds/image/random')
+response = request.get('https://dog.ceo/api/breeds/image/random')
+body = response.json()
+print(body)
+print(response.headers)
 
-data = res.text
+cuerpo = open("cuerpo.txt","w")
+cuerpo.write(str(body))
+cuerpo.close()
 
-file = open("destino.txt", "w")
-file.write(data)
-file.close()
+encabezado = open("encabezado.txt", "w")
+encabezado.write(str(response.headers))
+encabezado.close()
+
