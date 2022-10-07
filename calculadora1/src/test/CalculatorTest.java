@@ -28,5 +28,9 @@ public class CalculatorTest{
   assertEquals(calculator.divicion(4,2),2);
 
  }
+ @Test
+ public void cuadraticaTest(){
+  assertEquals(calculator.cuadratica(2,14,20),-2,-5);
+}
 
 }
