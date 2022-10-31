@@ -1,4 +1,4 @@
- float [] cuadratica (float numero1, float numero2, float numero3){
+    float [] Cuadratica (float numero1, float numero2, float numero3){
      float cuadrado = numero2 * numero2;
      float raiz = (float) Math.sqrt( cuadrado-4* numero1* numero3);
      float cuenta =(float) raiz;
@@ -6,7 +6,7 @@
      if (verificacion% 2 == 0);{
          float F1 = ((-numero2)+cuenta/(2*numero1));
          float F2 = ((-numero2)-cuenta/(2*numero1));
-         float [] Resultado = (F1 : F2);
+         float [] Resultado ={F1 , F2};
 
          return  Resultado;
 
