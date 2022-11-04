@@ -1,36 +1,60 @@
 package test;
 
 import calcu.Calculator;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class CalculatorTest{
+public class CalculatorTest {
  Calculator calculator = new Calculator();
 
  @Test
-    public void sumaTest(){
-     assertEquals(calculator.suma(1,2),3);
+ public void sumaTest() {
+  assertEquals(calculator.suma(1, 2), 3);
+  assertNotEquals(calculator.suma(5, 5), 9);
+
 
  }
+
  @Test
-  public void restaTest(){
-  assertEquals(calculator.resta(2,1),1);
+ public void restaTest() {
+  assertEquals(calculator.resta(2, 1), 1);
+  assertNotEquals(calculator.resta(8, 5), 2);
 
  }
+
  @Test
- public void multiplicacionTest(){
-  assertEquals(calculator.multiplicacion(3,3),9);
+ public void multiplicacionTest() {
+  assertEquals(calculator.multiplicacion(3, 3), 9);
+  assertNotEquals(calculator.multiplicacion(5, 3), 10);
+
 
  }
+
  @Test
- public void divicionTest(){
-  assertEquals(calculator.divicion(4,2),2);
+ public void dividirTest() {
+  assertEquals(calculator.dividir(4, 2), 2);
+  assertEquals(calculator.dividir(18, 3), 2);
+
 
  }
+
  @Test
- public void cuadraticaTest(){
-  assertEquals(calculator.cuadratica(2,14,20),-2,-5);
+ public void cuaTest() {
+  double result[] = {1, -5};
+  assertArrayEquals(calculator.cuadratica(1, 4, (-5)), result, 0);
+ }
+ @Test
+
+ public void cuaTestM() {
+  double var = 991;
+  double var2 = 9;
+
+  double result[] = {var, var2};
+
+  assertArrayEquals(calculator.cuadratica(1, 4, (-5)), result, 990);
+
+ }
 }
 
-}
+
