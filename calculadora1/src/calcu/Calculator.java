@@ -20,24 +20,6 @@ public class Calculator {
         return numero1 / numero2;
 
     }
-<<<<<<< HEAD
-=======
-       float [] Cuadratica (float numero1, float numero2, float numero3){
-     float cuadrado = numero2 * numero2;
-     float raiz = (float) Math.sqrt( cuadrado-4* numero1* numero3);
-     float cuenta =(float) raiz;
-     float verificacion = cuenta;
-     if (verificacion% 2 == 0);{
-         float F1 = ((-numero2)+cuenta/(2*numero1));
-         float F2 = ((-numero2)-cuenta/(2*numero1));
-         float [] Resultado ={F1 , F2};
-
-         return  Resultado;
-
-        }
-    }
-}
->>>>>>> aeabc68e547e96793e090e45cdfdf6a6a494e415
 
 
         public double[] cuadratica(double a, double b, double c) {
@@ -53,4 +35,5 @@ public class Calculator {
             return new double[]{0};
         }
     }
+
 
