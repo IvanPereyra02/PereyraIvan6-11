@@ -38,6 +38,10 @@ public class CalculatorTest {
 
 
  }
+ @Test (expected = ArithmeticException.class)
+ public void divTestExcep(){
+      calculator.dividir(2,0);
+ }
 
  @Test
  public void cuaTest() {
