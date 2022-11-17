@@ -16,34 +16,52 @@ class CalcuApplicationTests {
 	}
 	@Test
 	public void suma() {
-		Assertions.assertEquals(Calcu.suma(2,5),7);
-		Assertions.assertEquals(Calcu.suma(845,100),945);
-		Assertions.assertNotEquals(Calcu.suma(9,4),80);
+		assertEquals(Calcu.suma(2,5),7);
+		
+
+	}
+	@Test
+	public void sumaMAL(){
+		assertNotEquals(Calcu.suma(9,4),3);
 
 	}
 	@Test
 
 	public void resta(){
-		Assertions.assertEquals(Calcu.resta(4,2),2);
-		Assertions.assertEquals(Calcu.resta(4,2),2);
-		Assertions.assertNotEquals(Calcu.resta(9,4),3);
+		assertEquals(Calcu.resta(4,2),2);
+
+	}
+	@Test 
+	public void restaMal(){
+			assertNotEquals(Calcu.resta(9,4),351);
 
 	}
 	@Test
 	public void multi(){
-		Assertions.assertEquals(Calcu.multi(5,2),10);
-		Assertions.assertEquals(Calcu.multi(-4,10),-40);
-		Assertions.assertNotEquals(Calcu.multi(10,7),50);
+		assertEquals(Calcu.multi(5,2),10);
 
 	}
+	@Test public void multiMal(){
+			assertNotEquals(Calcu.multi(10,7),50);
+
+	}
+	
 	@Test
 	public void div (){
-		Assertions.assertEquals(Calcu.div(8,1),8);
-		Assertions.assertEquals(Calcu.div(-8,-2),4);
-		Assertions.assertEquals(Calcu.div(-8,2),-4);
-		Assertions.assertNotEquals(Calcu.div(20,30),5);
+		assertEquals(Calcu.div(8,1),8);
+		assertEquals(Calcu.div(-8,-2),4);
+		assertEquals(Calcu.div(-8,2),-4);
+	}
+	@Test 
+	public void divMal(){
+		assertNotEquals(Calcu.div(20,30),5);
+	}
+		
+	@Test 
+	public void divException(){
 		Assertions.assertThrows(ArithmeticException.class,() -> {Calcu.div(2,0);});
-
+	
+	}
 
 
 
