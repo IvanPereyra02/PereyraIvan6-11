@@ -49,8 +49,6 @@ class CalcuApplicationTests {
 	@Test
 	public void div (){
 		assertEquals(Calcu.div(8,1),8);
-		assertEquals(Calcu.div(-8,-2),4);
-		assertEquals(Calcu.div(-8,2),-4);
 	}
 	@Test 
 	public void divMal(){
