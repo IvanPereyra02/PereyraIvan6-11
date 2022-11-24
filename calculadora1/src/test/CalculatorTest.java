@@ -14,10 +14,10 @@ public class CalculatorTest {
 
 
  }
- 
- @Test 
- public void sumaMalTest(){
-   assertNotEquals(calculator.suma(5, 5), 9);
+
+ @Test
+ public void sumaMalTest() {
+  assertNotEquals(calculator.suma(5, 5), 9);
 
  }
 
@@ -26,21 +26,23 @@ public class CalculatorTest {
   assertEquals(calculator.resta(2, 1), 1);
 
  }
-@Test
- public void restaMalTest(){
-   assertNotEquals(calculator.resta(8, 5), 2);
+
+ @Test
+ public void restaMalTest() {
+  assertNotEquals(calculator.resta(8, 5), 2);
 
  }
- 
+
  @Test
  public void multiplicacionTest() {
   assertEquals(calculator.multiplicacion(3, 3), 9);
 
 
  }
- @Test 
- public void multiplicacionMalTest(){
-   assertNotEquals(calculator.multiplicacion(5, 3), 10);
+
+ @Test
+ public void multiplicacionMalTest() {
+  assertNotEquals(calculator.multiplicacion(5, 3), 10);
 
  }
 
@@ -50,33 +52,36 @@ public class CalculatorTest {
 
 
  }
- @Test 
- public void dividirMalTest(){
- assertNotEquals(calculator.dividir(18, 3), 2);
 
- }
- 
- @Test (expected = ArithmeticException.class)
- public void divTestExcep(){
-      calculator.dividir(2,0);
+ @Test
+ public void dividirMalTest() {
+  assertNotEquals(calculator.dividir(18, 3), 2);
+
  }
 
  @Test
- public void cuaTest() {
-  double result[] = {1, -5};
-  assertArrayEquals(calculator.cuadratica(1, 4, (-5)), result, 0);
+ public void div0() {
+  assertThrows(ArithmeticException.class, () -> {
+   calculator.dividir(2, 0);
+  });
  }
- @Test
 
- public void cuaTestM() {
-  double var = 991;
-  double var2 = 9;
+  @Test
+  public void cuaTest () {
+   double result[] = {1, -5};
+   assertArrayEquals(calculator.cuadratica(1, 4, (-5)), result, 0);
+  }
+  @Test
 
-  double result[] = {var, var2};
+  public void cuaTestM () {
+   double var = 991;
+   double var2 = 9;
 
-  assertArrayEquals(calculator.cuadratica(1, 4, (-5)), result, 990);
+   double result[] = {var, var2};
 
+   assertArrayEquals(calculator.cuadratica(1, 4, (-5)), result, 990);
+
+  }
  }
-}
 
 
